@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @tailwind utilities;
+
+.in{
+    @apply h-10 bg-gradient-to-r from-gray-100 to-gray-300 w-85 rounded-md p-3 mt-5;
+}

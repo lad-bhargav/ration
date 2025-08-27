@@ -3,6 +3,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const MONGO_URL = 'mongodb://127.0.0.1:27017/ration';
 const app = express();
+const cors = require("cors");
+app.use(cors());
+
+
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
+
 
 async function main(){
     await mongoose.connect(MONGO_URL);
@@ -18,16 +25,17 @@ app.get("/",(req,res)=>{
 
 app.post("/signup",async (req,res)=>{
     let {username , password , email} = req.body;
-    let newUser = User({
-        username : username,
-        password : password,
-        email : email,
-    });
-    console.log(newUser);
-    await newUser.save();
-    res.json({
-        "message" : "SignedUp",
-    });
+    if(username != '' && password != '' && email != ''){
+        let newUser = new User({
+            username : username,
+            password : password,
+            email : email,
+        });
+        await newUser.save();
+        res.json({
+            "message" : "SignedUp",
+        });
+    }
 })
 
 app.listen(8080,()=>{
