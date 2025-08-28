@@ -36,6 +36,30 @@ app.post("/signup",async (req,res)=>{
             "message" : "SignedUp",
         });
     }
+});
+
+app.post("/login",async (req,res) => {
+    const {email,password} = req.body;
+    console.log(email,password);
+    const userIn = await User.find({
+        "email" : email
+    });
+
+    if(userIn.length == 0){
+        res.json({
+            "message" : "Invalid email",
+        })
+    }
+
+    if(userIn[0].password == password){
+        res.json({
+            "message" : "login"
+        })
+    }else{
+        res.json({
+            "message" : "Invalid password"
+        })
+    }
 })
 
 app.listen(8080,()=>{
