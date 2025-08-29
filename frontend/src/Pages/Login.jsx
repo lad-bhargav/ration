@@ -5,6 +5,7 @@ import axios from "axios";
 export default function Login(){
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
 
     const navigate = useNavigate();
 
@@ -13,13 +14,15 @@ export default function Login(){
 
         try {
             const LoginAPI = await axios.post("http://localhost:8080/login", {
+                username,
                 password,
                 email,
             });
 
             if (LoginAPI.data.message === "login") {
                 localStorage.setItem("email",email);
-                navigate("/", { replace: true });
+                localStorage.setItem("username",username);
+                navigate("/Home", { replace: true });
             } else {
                 alert("Invalid email or password");
             }

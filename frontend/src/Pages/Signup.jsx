@@ -20,7 +20,7 @@ export default function Signup() {
       });
 
       if (SignupAPI.data.message === "SignedUp") {
-        navigate("/", { replace: true });
+        navigate("/login", { replace: true });
       } else {
         alert("Sign-up failed");
       }
