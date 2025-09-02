@@ -13,7 +13,7 @@ export default function NavMain() {
   }, []);
   return (
     <div className="navbar w-full h-[10vh] flex justify-between items-center px-6 bg-green-600 text-white">
-      <Link to="/Home" className="font-bold text-xl cursor-pointer">
+      <Link to="/ration" className="font-bold text-xl cursor-pointer">
         ration
       </Link>
 
@@ -26,7 +26,7 @@ export default function NavMain() {
       </div>
       <div className="flex items-center gap-6">
         <ShoppingCartIcon className="cursor-pointer text-2xl" />
-        <h4 className="text-base">Welcome,{username}</h4>
+        <h4 className="text-base">{username ? `Welcome, ${username}` : "Welcome"}</h4>
       </div>
     </div>
   );

@@ -53,7 +53,8 @@ app.post("/login",async (req,res) => {
 
     if(userIn[0].password == password){
         res.json({
-            "message" : "login"
+            "message" : "login",
+            "username" : userIn[0].username,
         })
     }else{
         res.json({

@@ -6,6 +6,8 @@ import './index.css'
 import App from './App.jsx'
 import Signup from './Pages/Signup.jsx'
 import Login from './Pages/Login.jsx';
+import Home from './Pages/Home.jsx';
+import HomeMain from './Pages/HomeMain.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,8 +16,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/signup" element={<Signup />} />
         <Route path='/login' element = {<Login />} />
-        <Route path="/home" element={<Signup />} />
-        <Route path='/Home' element = {<Login />} />
+        <Route path="/ration" element={<HomeMain />} />
+        <Route path='/Home' element = {<Home />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
