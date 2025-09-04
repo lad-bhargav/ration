@@ -12,7 +12,7 @@ export default function NavMain() {
     }
   }, []);
   return (
-    <div className="navbar w-full h-[10vh] flex justify-between items-center px-6 bg-green-600 text-white">
+    <div className="navbar shadow-lg shadow-black/7 max-w-screen h-[10vh] fixed top-0 left-0 w-full bg-white/10 backdrop-blur-md z-50 flex justify-between items-center px-6 text-white">
       <Link to="/ration" className="font-bold text-xl cursor-pointer">
         ration
       </Link>
@@ -26,7 +26,12 @@ export default function NavMain() {
       </div>
       <div className="flex items-center gap-6">
         <ShoppingCartIcon className="cursor-pointer text-2xl" />
-        <h4 className="text-base">{username ? `Welcome, ${username}` : "Welcome"}</h4>
+        <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-[#f7971e] to-[#ffd200] text-xl font-semibold">
+        <pre className="flex">
+          <h4 className="text-white">Hey,</h4>
+          {username}
+        </pre>
+        </h4>
       </div>
     </div>
   );
