@@ -31,7 +31,7 @@ export default function Login(){
     }
   };
     return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center bg-[#56ffa2]">
+    <div className="h-screen w-screen flex flex-col justify-center items-center bg-gradient-to-t from-[#5bffa0] to-[#2AF598]">
       <form className="card bg-gradient-to-r border-amber-50 border-1 from-[#328E6E] to-[#67AE6E] h-102 w-100 rounded-md text-center flex flex-col justify-center items-center">
         <h1 className="font-bold text-2xl text-white">ration</h1>
         <input className="in"

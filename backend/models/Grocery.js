@@ -2,9 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const GrocerySchema = new Schema({
-    id : {
-        type : Number,
-    },
     title : {
         type : String,
     },
@@ -14,7 +11,10 @@ const GrocerySchema = new Schema({
     unit : {
         type : String,
     },
-    image : {
+    img : {
+        type : String,
+    },
+    description : {
         type : String,
     }
 });
