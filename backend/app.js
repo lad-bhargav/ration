@@ -1,4 +1,5 @@
 const User = require("./models/User.js");
+const Grocery = require("./models/Grocery.js");
 const express = require("express");
 const mongoose = require("mongoose");
 const MONGO_URL = 'mongodb://127.0.0.1:27017/ration';
@@ -60,6 +61,26 @@ app.post("/login",async (req,res) => {
         res.json({
             "message" : "Invalid password"
         })
+    }
+});
+
+// app.post("/ration",async(req,res)=>{
+//     let grocery1 = new Grocery({
+//         id : 1,
+//         title : "Dal",
+//         price : 123,
+//         unit : "1kg",
+//     });
+//     await grocery1.save();
+//     res.send("data is added");
+// });
+
+app.get("/ration",async(req,res)=>{
+    try{
+        const groceries = await Grocery.find({});
+        res.json(groceries);
+    }catch(err){
+        res.status(500).json({error : err.message});
     }
 })
 
