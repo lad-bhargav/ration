@@ -21,7 +21,7 @@ export default function NavMain() {
         <input
           type="text"
           placeholder="Search your ration here..."
-          className="px-3 py-2 rounded-full text-white w-full border border-white/70 bg-transparent placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"
+          className="px-3 py-2 rounded-full text-white w-full border border-white bg-transparent placeholder-white focus:outline-none focus:ring-2 focus:ring-white"
         />
       </div>
       <div className="flex items-center gap-6">
