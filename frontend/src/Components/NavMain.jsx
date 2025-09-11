@@ -29,7 +29,7 @@ export default function NavMain() {
         <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-[#f7971e] to-[#ffd200] text-xl font-semibold">
         <pre className="flex">
           <h4 className="text-white">Hey,</h4>
-          {username}
+          <Link to="/profile">{username}</Link>
         </pre>
         </h4>
       </div>

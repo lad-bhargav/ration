@@ -7,3 +7,7 @@
 .box{
     @apply h-full w-xl text-center font-semibold;
 }
+
+.btn-sm{
+    @apply h-[30px] w-[70px] bg-gray-200 text-black cursor-pointer rounded-md;
+}

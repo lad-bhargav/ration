@@ -1,5 +1,6 @@
 import { Navigate } from "react-router-dom";
 import Home from './Pages/Home'
+import "./index.css"
 import HomeMain from './Pages/HomeMain'
 
 

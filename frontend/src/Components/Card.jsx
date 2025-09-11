@@ -1,4 +1,6 @@
-export default function Card({title,price,unit,img,description}){
+import { Link } from "react-router-dom";
+
+export default function Card({id,title,price,unit,img,description}){
     return(
         <div className="card h-[57vh] w-[22vw] shadow-lg shadow-black/20 bg-white rounded-md p-4 m-3">
             <div className="bg-red-500 w-full h-45 rounded-lg overflow-hidden">
@@ -17,7 +19,7 @@ export default function Card({title,price,unit,img,description}){
                 <p>{description}</p>
             </div>
             <div className="h-20 flex justify-center items-center">
-                <button className="h-10 w-35  cursor-pointer rounded-md bg-amber-300">Buy Now</button>
+                <Link to=""></Link>
             </div>
         </div>
     );

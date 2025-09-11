@@ -82,6 +82,40 @@ app.get("/ration",async(req,res)=>{
     }catch(err){
         res.status(500).json({error : err.message});
     }
+});
+
+app.post("/profile",async(req,res)=>{
+    try{
+        const {email} = req.body;
+        const profile = await User.findOne({
+            "email" : email,
+        });
+        res.json({
+            "profile" : profile,
+        })
+    }catch(err){
+        res.status(500).json({error : err.message});
+    }
+});
+
+app.post("/profile/edit",async(req,res)=>{
+    const {email,username,password,profilepic} = req.body;
+
+    const user = await User.findOneAndUpdate({
+        "email" : email,
+    },{
+        "username" : username,
+        "password" : password,
+        "profilepic" : profilepic,
+    });
+
+    res.json({
+        "message" : "profile update successfully",
+    })
+});
+
+app.get("/ration/:id",async(req,res)=>{
+    
 })
 
 app.listen(8080,()=>{

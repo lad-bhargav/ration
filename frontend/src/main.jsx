@@ -8,6 +8,9 @@ import Signup from './Pages/Signup.jsx'
 import Login from './Pages/Login.jsx';
 import Home from './Pages/Home.jsx';
 import HomeMain from './Pages/HomeMain.jsx';
+import ProductDetails from './Pages/ProductDetails.jsx';
+import Profile from './Pages/Profile.jsx';
+import EditProfile from './Pages/EditProfile.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,6 +21,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/login' element = {<Login />} />
         <Route path="/ration" element={<HomeMain />} />
         <Route path='/Home' element = {<Home />} />
+        <Route path='/profile' element = {<Profile/>}/>
+        <Route path='/profile/edit' element = {<EditProfile/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
