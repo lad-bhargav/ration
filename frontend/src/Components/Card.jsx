@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Card({id,title,price,unit,img,description}){
+    const navigate = useNavigate();
+    const visitCard = () => {
+        navigate(`/${id}`);
+    }
     return(
-        <div className="card h-[57vh] w-[22vw] shadow-lg shadow-black/20 bg-white rounded-md p-4 m-3">
+        <div className="card cursor-pointer h-[57vh] w-[22vw] shadow-lg shadow-black/20 bg-white rounded-md p-4 m-3" onClick={visitCard}>
             <div className="bg-red-500 w-full h-45 rounded-lg overflow-hidden">
                 <img
                     src={img}
@@ -17,9 +21,6 @@ export default function Card({id,title,price,unit,img,description}){
             </div>
             <div>
                 <p>{description}</p>
-            </div>
-            <div className="h-20 flex justify-center items-center">
-                <Link to=""></Link>
             </div>
         </div>
     );

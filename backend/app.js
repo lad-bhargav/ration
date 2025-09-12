@@ -114,8 +114,15 @@ app.post("/profile/edit",async(req,res)=>{
     })
 });
 
-app.get("/ration/:id",async(req,res)=>{
-    
+app.get("/:id",async(req,res)=>{
+    try{
+        const {id} = req.params;
+        const singleCard = await Grocery.findById(id);
+        console.log(singleCard);
+        res.json(singleCard);
+    }catch(err){
+        res.status(500).json({error : err.message});
+    }
 })
 
 app.listen(8080,()=>{
