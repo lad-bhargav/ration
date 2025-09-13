@@ -12,8 +12,8 @@ export default function NavMain() {
     }
   }, []);
   return (
-    <div className="navbar shadow-lg shadow-black/7 max-w-screen h-[10vh] fixed top-0 left-0 w-full bg-white/10 backdrop-blur-md z-50 flex justify-between items-center px-6 text-white">
-      <Link to="/ration" className="font-bold text-xl cursor-pointer">
+    <div className="navbar shadow-lg/5 bg-[#2b7541] max-w-screen h-[10vh] fixed top-0 left-0 w-full flex justify-between items-center px-6 text-white">
+      <Link to="/ration" className="font-bold text-2xl cursor-pointer">
         ration
       </Link>
 

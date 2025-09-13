@@ -2,12 +2,9 @@
 @tailwind utilities;
 
 .in{
-    @apply h-10 bg-gradient-to-r from-gray-100 to-gray-300 w-85 rounded-md p-3 mt-5;
+    @apply h-10 bg-gray-300 w-75 rounded-lg shadow-lg p-3;
 }
 .box{
     @apply h-full w-xl text-center font-semibold;
 }
 
-.btn-sm{
-    @apply h-[30px] w-[70px] bg-gray-200 text-black cursor-pointer rounded-md;
-}

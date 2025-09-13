@@ -36,17 +36,17 @@ import NavMain from "../Components/NavMain";
         }
 
         return(
-        <div className="h-screen w-screen bg-gradient-to-t from-[#5bffa0] to-[#2AF598]">
+        <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-t from-[#9DC183] to-[#8A9A5B]">
             <NavMain/>
-            <div className="h-screen w-screen flex flex-col justify-center items-center">
-                <div>
-                    <p>{profile.username}</p>
-                    <p>{profile.email}</p>
-                    <img src={profile.profilepic} alt="no pic" />
+            <div className="bg-gradient-to-l from-yellow-100 to-blue-100 shadow-lg h-[65vh] w-[60vw] p-3.5 rounded-2xl flex flex-col justify-center items-center">
+                <div className="h-[60%] w-full flex justify-center items-center flex-col">
+                    <div className="h-[100px] w-[100px] rounded-full overflow-hidden bg-amber-300"><img src={profile.profilepic} className="object-cover h-full w-full" alt="no pic"/></div>
+                    <p className="font-bold mt-2">{profile.username}</p>
+                    <p className="font-bold">{profile.email}</p>
                 </div>
-                <div>
-                    <button className="btn-lg btn-md btn-sm sm:h-[35px] sm:w-[80px] sm:bg-amber-300" onClick={editProfile}>Edit</button><br /><br />
-                    <button className="btn-lg btn-md btn-sm sm:h-[35px] sm:w-[80px] sm:bg-amber-300" onClick={logOut}>Log-out</button>
+                <div className="h-[30%] w-full flex flex-col justify-items-start items-center">
+                    <button className="h-10 w-22 cursor-pointer text-white mt-2 font-semibold rounded-md bg-gradient-to-l from-yellow-400 to-orange-400" onClick={editProfile}>Edit</button>
+                    <button className="h-10 w-22 cursor-pointer mt-4 text-red-600 font-semibold rounded-md bg-gradient-to-r from-red-200 to-red-200" onClick={logOut}>Log-out</button>
                 </div>
             </div>
         </div>

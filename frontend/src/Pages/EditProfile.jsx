@@ -34,20 +34,30 @@ export default function EditProfile(){
         });
         if(newProfile.data.message == "profile update successfully"){
             navigate("/profile");
+            localStorage.setItem("username",username);
         }else{
             alert("unable to update");
         }
     }
 
     return(
-        <div className="h-screen w-screen bg-gradient-to-t from-[#5bffa0] to-[#2AF598] flex flex-col justify-center items-center">
+        <div className="h-screen w-screen bg-gradient-to-t from-[#9DC183] to-[#8A9A5B] flex flex-col justify-center items-center">
             <NavMain/>
-            <div className="flex flex-col justify-center items-center">
-                <h1>Edit Profile</h1>
-                <input type="text" name="username" placeholder="username..." value={username} onChange={(e) => setUsername(e.target.value)}/>
-                <input type="password" name="password" placeholder="password..." value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <input type="text" name="image" placeholder="profile picture" value={profilePic} onChange={(e) => setProfilePic(e.target.value)}/><br />
-                <button className="btn-sm" onClick={upadteProfile}>Edit</button>
+            <div className="bg-gradient-to-l from-yellow-100 to-blue-100 shadow-lg h-[65vh] w-[60vw] p-3.5 rounded-2xl flex flex-col justify-center items-center">
+                <h1 className="font-bold text-3xl">Edit Profile</h1>
+                <div className="mt-5">
+                    <p className="text-sm font-semibold">username</p>
+                    <input type="text" name="username" className="in" placeholder="username..." value={username} onChange={(e) => setUsername(e.target.value)}/>
+                </div>
+                <div className="mt-5">
+                    <p className="text-sm font-semibold">password</p>
+                    <input type="password" className="in" name="password" placeholder="password..." value={password} onChange={(e) => setPassword(e.target.value)}/>
+                </div>
+                <div className="mt-5">
+                    <p className="text-sm font-semibold">image</p>
+                    <input type="text" name="image" className="in" placeholder="profile picture" value={profilePic} onChange={(e) => setProfilePic(e.target.value)}/><br />
+                </div>
+                <button className="h-10 w-22 cursor-pointer text-white mt-5 font-semibold rounded-md bg-gradient-to-l from-yellow-400 to-orange-400" onClick={upadteProfile}>Edit</button>
             </div>
         </div>
     );

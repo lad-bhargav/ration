@@ -14,7 +14,13 @@ const userSchema = new Schema({
     },
     profilepic: {
         type : String,
-    }
+    },
+    cart : [
+        {
+            type : mongoose.Schema.Types.ObjectId,
+            ref : "Grocery",
+        },
+    ]
 });
 
 const User = mongoose.model("User",userSchema);

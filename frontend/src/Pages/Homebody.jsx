@@ -11,7 +11,7 @@ export default function Homebody(){
         .catch((err)=>console.log("error in fetching data : ",err));
     },[]);
     return(
-        <div className="min-h-screen pt-20 max-w-screen bg-gradient-to-t from-[#5bffa0] to-[#2AF598] grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center p-6">
+        <div className="min-h-screen pt-20 max-w-screen bg-gradient-to-t from-[#9DC183] to-[#8A9A5B] grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center p-6">
             {groceryData.map((item,idx) => (
             <Card
                 id = {item._id}
