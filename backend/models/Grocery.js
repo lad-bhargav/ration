@@ -16,6 +16,9 @@ const GrocerySchema = new Schema({
     },
     description : {
         type : String,
+    },
+    maindescription : {
+        type : String,
     }
 });
 

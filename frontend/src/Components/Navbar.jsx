@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 export default function Navbar() {
   return (
     <div className="navbar shadow-lg/5 bg-[#2b7541] max-w-screen h-[10vh] fixed top-0 left-0 w-full flex justify-between items-center px-6 text-white">
       <div className="w-[30%]">
-        <Link to="/Home" className="font-bold text-2xl cursor-pointer">
+        <Link to="/Home" className="font-bold text-3xl cursor-pointer">
+        <ShoppingBagIcon className="text-green-500 mb-1" fontSize="20px"/>
         ration
        </Link>
       </div>

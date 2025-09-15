@@ -7,4 +7,9 @@
 .box{
     @apply h-full w-xl text-center font-semibold;
 }
-
+.buytitle{
+    @apply font-bold text-3xl text-black;
+}
+.buytext{
+    @apply font-semibold text-2xl font-sans;
+}
