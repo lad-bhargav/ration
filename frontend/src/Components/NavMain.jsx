@@ -19,15 +19,7 @@ export default function NavMain() {
         ration
       </Link>
 
-      <div className="flex-1 max-w-md px-4">
-        <input
-          type="text"
-          placeholder="Search your ration here..."
-          className="px-3 py-2 rounded-full text-white w-full border border-white bg-transparent placeholder-white focus:outline-none focus:ring-2 focus:ring-white"
-        />
-      </div>
       <div className="flex items-center gap-6">
-        <ShoppingCartIcon className="cursor-pointer text-2xl" />
         <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-[#f7971e] to-[#ffd200] text-xl font-semibold">
         <pre className="flex">
           <h4 className="text-white">Hey,</h4>

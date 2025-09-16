@@ -13,3 +13,9 @@
 .buytext{
     @apply font-semibold text-2xl font-sans;
 }
+.inBuy{
+    @apply h-10 bg-gray-100 text-gray-700 shadow-lg cursor-not-allowed w-60 rounded p-3;
+}
+.inBuyAble{
+    @apply h-10 bg-white text-black rounded w-60 p-3 shadow-lg;
+}

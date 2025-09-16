@@ -43,7 +43,7 @@ export default function EditProfile(){
     return(
         <div className="h-screen w-screen bg-gradient-to-t from-[#9DC183] to-[#8A9A5B] flex flex-col justify-center items-center">
             <NavMain/>
-            <div className="bg-gradient-to-l from-yellow-100 to-blue-100 shadow-lg h-[65vh] w-[60vw] p-3.5 rounded-2xl flex flex-col justify-center items-center">
+            <div className="bg-gradient-to-r from-green-100 to-green-200 shadow-lg h-[70vh] mt-5 w-[60vw] p-3.5 rounded-2xl flex flex-col justify-center items-center">
                 <h1 className="font-bold text-3xl">Edit Profile</h1>
                 <div className="mt-5">
                     <p className="text-sm font-semibold">username</p>

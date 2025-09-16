@@ -6,6 +6,12 @@ export default function Card({id,title,price,unit,img,description}){
     const visitCard = () => {
         navigate(`/${id}`);
     }
+    const buyBtn = () => {
+        localStorage.setItem("item",title);
+        localStorage.setItem("price",price);
+        localStorage.setItem("unit",unit);
+        navigate("/buynow");
+    }
     return(
         <div className="card h-[57vh] w-[22vw] shadow-lg shadow-black/20 bg-white rounded-md p-4 m-3">
             <div className="top">
@@ -26,9 +32,7 @@ export default function Card({id,title,price,unit,img,description}){
             </div>
             </div>
             <div className="bottom h-15 w-full flex justify-center items-center">
-                <Link to="/buynow">
-                    <button className="bg-gradient-to-l text-white font-semibold text-lg from-yellow-400 to-orange-400 h-10 shadow-lg cursor-pointer rounded-lg w-65">Buy Now</button>
-                </Link>
+                    <button className="bg-gradient-to-l text-white font-semibold text-lg from-yellow-400 to-orange-400 h-10 shadow-lg cursor-pointer rounded-lg w-65" onClick={buyBtn}>Buy Now</button>
             </div>
         </div>
     );

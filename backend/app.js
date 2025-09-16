@@ -1,5 +1,6 @@
 const User = require("./models/User.js");
 const Grocery = require("./models/Grocery.js");
+const Orders = require("./models/Orders.js");
 const express = require("express");
 const mongoose = require("mongoose");
 const MONGO_URL = 'mongodb://127.0.0.1:27017/ration';
@@ -113,6 +114,29 @@ app.post("/profile/edit",async(req,res)=>{
         "message" : "profile update successfully",
     })
 });
+
+app.post("/buynow",async(req,res)=>{
+    const {email,item,price,unit,address,Fplace,phNum,mop} = req.body;
+    if(address == '' && Fplace == '' &&  phNum == 0){
+        alert("Fill all Details");
+    }else{
+        let order = new Orders({
+        email : email,
+        item : item,
+        price : price,
+        unit : unit,
+        address : address,
+        Fplace : Fplace,
+        phNum : phNum,
+        mop : mop,
+    });
+    await order.save();
+    res.json({
+        "message" : "order placed",
+    });
+    }
+    
+})
 
 app.get("/:id",async(req,res)=>{
     try{

@@ -38,7 +38,7 @@ import NavMain from "../Components/NavMain";
         return(
         <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-t from-[#9DC183] to-[#8A9A5B]">
             <NavMain/>
-            <div className="bg-gradient-to-l from-yellow-100 to-blue-100 shadow-lg h-[65vh] w-[60vw] p-3.5 rounded-2xl flex flex-col justify-center items-center">
+            <div className="bg-gradient-to-r from-green-100 to-green-200 shadow-lg h-[80vh] w-[60vw] p-3.5 rounded-2xl flex flex-col justify-center items-center mt-10">
                 <div className="h-[60%] w-full flex justify-center items-center flex-col">
                     <div className="h-[100px] w-[100px] rounded-full overflow-hidden bg-amber-300"><img src={profile.profilepic} className="object-cover h-full w-full" alt="no pic"/></div>
                     <p className="font-bold mt-2">{profile.username}</p>
