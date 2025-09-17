@@ -20,6 +20,7 @@ export default function Login(){
             if (LoginAPI.data.message === "login") {
                 localStorage.setItem("email",email);
                 localStorage.setItem("username",LoginAPI.data.username);
+                localStorage.setItem("userId",LoginAPI.data.id);
                 localStorage.setItem("logined","true");
                 navigate("/ration", { replace: true });
             } else {

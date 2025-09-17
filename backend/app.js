@@ -57,6 +57,7 @@ app.post("/login",async (req,res) => {
         res.json({
             "message" : "login",
             "username" : userIn[0].username,
+            "id" : userIn[0]._id,
         })
     }else{
         res.json({
@@ -135,7 +136,17 @@ app.post("/buynow",async(req,res)=>{
         "message" : "order placed",
     });
     }
-    
+});
+
+app.get("/orders/:email",async(req,res)=>{
+    try{
+        const {email} = req.params;
+        const orders = await Orders.find({"email" : email});
+        res.json(orders);
+    }catch(err){
+        console.log(err);
+        res.status(500).json({error : err.message});
+    }
 })
 
 app.get("/:id",async(req,res)=>{

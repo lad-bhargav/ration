@@ -32,6 +32,7 @@ import NavMain from "../Components/NavMain";
         const logOut = async() => {
             const Email = localStorage.removeItem("email");
             const username = localStorage.removeItem("username");
+            const userId = localStorage.removeItem("userId");
             navigate("/login");
         }
 

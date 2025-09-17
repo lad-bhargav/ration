@@ -12,6 +12,7 @@ import Profile from './Pages/Profile.jsx';
 import EditProfile from './Pages/EditProfile.jsx';
 import CardPage from './Pages/CardPage.jsx';
 import BuyNow from './Pages/BuyNow.jsx';
+import Orders from './Pages/Orders.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/profile/edit' element = {<EditProfile/>}/>
         <Route path='/:id' element = {<CardPage/>}/>
         <Route path='buynow' element = {<BuyNow/>} />
+        <Route path='/orders' element = {<Orders/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
